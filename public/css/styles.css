@@ -163,6 +163,12 @@ a:hover {
   padding: 6px;
   color: #fff;
 }
+.centre {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
 .btn-twitter {
   background-color: #4099ff;
