@@ -45,10 +45,7 @@ function router(nav) {
       book: books[id],
     });
   });
-  booksRouter.post("/", function (req, res) {
-    res.render("books", { nav, title: "Books", books });
-    res.end();
-  });
+
   return booksRouter;
 }
 

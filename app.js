@@ -13,6 +13,11 @@ const loginRouter = require("./src/routes/loginroute")(nav);
 const signupRouter = require("./src/routes/signuproute")(nav);
 const addRouter = require("./src/routes/addroute")(nav);
 
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
 app.use(express.static("./public"));
 app.set("view engine", "ejs");
 app.set("views", "./src/views");
@@ -22,10 +27,5 @@ app.use("/authors", authorRouter);
 app.use("/login", loginRouter);
 app.use("/signup", signupRouter);
 app.use("/addbook", addRouter);
-app.use(
-  express.urlencoded({
-    extended: true,
-  })
-);
 
 app.listen(5000);
