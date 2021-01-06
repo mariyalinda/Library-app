@@ -9,6 +9,9 @@ function router(nav) {
   signupRouter.get("/", function (req, res) {
     res.render("signup", { nav, title: "Signup" });
   });
+  signupRouter.post("/signup-done", function (req, res) {
+    res.redirect("/home");
+  });
 
   return signupRouter;
 }

@@ -18,17 +18,6 @@ function router(nav) {
       title: "Library",
     });
   });
-  homeRouter.post("/home", (req, res) => {
-    //signup and login
-    var nav = [
-      { link: "/books", name: "Books" },
-      { link: "/authors", name: "Authors" },
-      { link: "/login", name: "Logout" },
-      { link: "/addbook", name: "Add a book" },
-    ];
-    res.render("index", { nav, title: "Library" });
-    res.end();
-  });
 
   return homeRouter;
 }

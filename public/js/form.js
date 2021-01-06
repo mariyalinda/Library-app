@@ -1,5 +1,4 @@
 function validate() {
-  var flag = false;
   var user = document.getElementById("username");
   var pw = document.getElementById("pw");
   if (user.value == "admin") {
@@ -22,6 +21,8 @@ function infocheck() {
   var title = document.getElementById("title");
   var authorname = document.getElementById("author");
   var genre = document.getElementById("genre");
+  var place = document.getElementById("place");
+
   if (
     title.value.trim().length > 1 &&
     authorname.value.trim().length > 2 &&
