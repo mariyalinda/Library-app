@@ -1,5 +1,6 @@
 const express = require("express");
 const app = new express();
+const port = process.env.PORT || 5000;
 var nav = [
   { link: "/books", name: "Books" },
   { link: "/authors", name: "Authors" },
@@ -28,4 +29,6 @@ app.use("/login", loginRouter);
 app.use("/signup", signupRouter);
 app.use("/addbook", addRouter);
 
-app.listen(5000);
+app.listen(port, () => {
+  console.log("Server ready at" + port);
+});
