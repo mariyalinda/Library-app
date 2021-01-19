@@ -29,7 +29,7 @@ function check() {
     return true;
   } else {
     if (flag3 == false) {
-      error3.innerText = "Invalid password";
+      error3.innerText = ""Your password must contain atleast 8 characters, atleast one uppercase letter,one lowercase letter and one number";
       error3.style.color = "red";
     }
     if (flag2 == false) {
